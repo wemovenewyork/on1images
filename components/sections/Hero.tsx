@@ -65,12 +65,23 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-image-container">
+      {/* Image container: position relative + overflow hidden so the absolute img is clipped */}
+      <div
+        className="hero-image-container"
+        style={{ position: 'relative', overflow: 'hidden', minHeight: '400px' }}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/hero-photo.jpg"
           alt="ON1 Images Photographer"
           className="hero-image"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
         />
       </div>
     </section>

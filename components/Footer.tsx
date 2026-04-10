@@ -44,7 +44,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <div style={{ textAlign: 'right' }}>
+      <div className="footer-connect">
         <div className="mono-sm">CONNECT</div>
         <p style={{ fontWeight: 700, marginTop: '0.5rem', fontSize: '1.2rem' }}>
           <a href="mailto:on1imagesbusiness@gmail.com" className="hover-target" style={{ color: 'inherit', textDecoration: 'none' }}>
@@ -56,24 +56,6 @@ export default function Footer() {
           </a>
         </p>
       </div>
-
-      <svg
-        style={{
-          position: 'absolute',
-          bottom: '2rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '200px',
-          opacity: 0.15,
-        }}
-        viewBox="0 0 200 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect x="0" y="0" width="100" height="2" fill="var(--fg)" />
-        <rect x="0" y="4" width="80" height="1" fill="var(--fg)" />
-        <rect x="0" y="8" width="90" height="4" fill="var(--fg)" />
-      </svg>
 
       <div className="footer-legal">
         © 2025 ON1 Images Photography · Connecticut · All Rights Reserved · Built with Purpose.

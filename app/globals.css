@@ -1497,3 +1497,14 @@ footer {
   .nav-right { border-left: none; }
   .nav-cta { display: none; }
 }
+
+/* ─── FOOTER CONNECT COLUMN ─── */
+.footer-connect {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .footer-connect {
+    text-align: left;
+  }
+}
