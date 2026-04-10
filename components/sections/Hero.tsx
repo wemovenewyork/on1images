@@ -66,12 +66,11 @@ export default function Hero() {
       </div>
 
       <div className="hero-image-container">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="/images/hero-photo.jpg"
           alt="ON1 Images Photographer"
-          fill
           className="hero-image"
-          priority
         />
       </div>
     </section>
