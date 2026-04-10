@@ -11,12 +11,7 @@
   "dependencies": {
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18",
-    "sanity": "^3.36.4",
-    "next-sanity": "^9.4.2",
-    "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^3.36.4",
-    "styled-components": "^6.1.8"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",

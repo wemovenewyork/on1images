@@ -1,22 +1,8 @@
 import Link from 'next/link';
 
-export interface PackageItem {
-  _id: string;
-  name: string;
-  price: number;
-  badge?: string;
-  featured: boolean;
-  code: string;
-  features: string[];
-}
-
-interface PackagesProps {
-  packages: PackageItem[];
-}
-
-const fallbackPackages: PackageItem[] = [
+const packages = [
   {
-    _id: '1',
+    id: '1',
     code: 'PKG.01 // ENTRY',
     name: 'Lite',
     price: 175,
@@ -30,7 +16,7 @@ const fallbackPackages: PackageItem[] = [
     ],
   },
   {
-    _id: '2',
+    id: '2',
     code: 'PKG.02 // STANDARD',
     name: 'Signature',
     price: 225,
@@ -46,7 +32,7 @@ const fallbackPackages: PackageItem[] = [
     ],
   },
   {
-    _id: '3',
+    id: '3',
     code: 'PKG.03 // PREMIUM',
     name: 'Luxe',
     price: 375,
@@ -62,9 +48,7 @@ const fallbackPackages: PackageItem[] = [
   },
 ];
 
-export default function Packages({ packages }: PackagesProps) {
-  const items = packages && packages.length > 0 ? packages : fallbackPackages;
-
+export default function Packages() {
   return (
     <section className="packages-section" id="packages">
       <div className="section-header">
@@ -79,8 +63,8 @@ export default function Packages({ packages }: PackagesProps) {
       </div>
 
       <div className="packages-grid">
-        {items.map((pkg) => (
-          <div key={pkg._id} className={`package-card${pkg.featured ? ' featured' : ''}`}>
+        {packages.map((pkg) => (
+          <div key={pkg.id} className={`package-card${pkg.featured ? ' featured' : ''}`}>
             {pkg.badge && <div className="pkg-badge">{pkg.badge}</div>}
             <div className="mono-sm">{pkg.code}</div>
             <div className="pkg-name">{pkg.name}</div>
